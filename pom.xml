@@ -7,6 +7,17 @@
     <groupId>com.yumcouver</groupId>
     <artifactId>spoonie</artifactId>
     <version>0.0.1</version>
-
+    <dependencies>
+            <dependency>
+                <groupId>org.jooq</groupId>
+                <artifactId>jooq</artifactId>
+                <version>3.4.2</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>5.1.32</version>
+            </dependency>
+    </dependencies>
 
 </project>
