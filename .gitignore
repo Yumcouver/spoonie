@@ -16,3 +16,7 @@ hs_err_pid*i
 
 #Pycharm
 .idea/
+
+target/
+src/main/resources
+src/test
