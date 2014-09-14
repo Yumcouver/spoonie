@@ -35,3 +35,4 @@ Here is one method of installing all the necessary dependencies on a Mac via Hom
 * [Java](http://docs.oracle.com/javase/7/docs/api/) : The primary development language of this project.
 * [jOOQ](http://www.jooq.org/) : jOOQ generates Java code from your database and lets you build typesafe SQL queries through its fluent API.
 * [Maven](http://maven.apache.org/) : Apache Maven is a software project management and comprehension tool.
+* [HtmlUnit](http://htmlunit.sourceforge.net/) : HtmlUnit is a "GUI-Less browser for Java programs".
