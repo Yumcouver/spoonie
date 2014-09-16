@@ -3,7 +3,7 @@ package com.yumcouver.spoonie.conf;
 /**
  * all information that generator need to generate sql code
  */
-public interface DBInfo {
+public interface DatabaseInfo {
 
     public String getDriver();
 
@@ -16,9 +16,4 @@ public interface DBInfo {
     public String getUserName();
 
     public String getPassword();
-
-    /**
-     * output xml format to be compatible with maven
-     */
-    public String toXML();
 }

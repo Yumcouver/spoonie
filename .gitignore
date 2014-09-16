@@ -18,5 +18,10 @@ hs_err_pid*i
 .idea/
 
 target/
-src/main/resources
 src/test
+src/main/java/com/yumcouver/spoonie/database
+
+generated/
+application.yaml
+db/
+*.log

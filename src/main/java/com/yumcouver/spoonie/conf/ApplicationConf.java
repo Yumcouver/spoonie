@@ -11,7 +11,7 @@ import java.util.Map;
 /**
  * configuration of application
  */
-public class ApplicationConf implements DBInfo {
+public class ApplicationConf implements DatabaseInfo {
     private DatabaseConf dbConf;
 
     public ApplicationConf(String env) {
@@ -57,8 +57,4 @@ public class ApplicationConf implements DBInfo {
         return dbConf.getPassword();
     }
 
-    @Override
-    public String toXML() {
-        return dbConf.toXML();
-    }
 }

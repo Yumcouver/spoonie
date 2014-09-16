@@ -5,7 +5,7 @@ import java.util.Map;
 /**
  * configuration of database
  */
-public class DatabaseConf implements DBInfo {
+public class DatabaseConf implements DatabaseInfo {
     private final String driver, url, typename, database, username, password;
 
     public DatabaseConf(Map<String, Object> conf) {
@@ -39,33 +39,5 @@ public class DatabaseConf implements DBInfo {
 
     public String getPassword() {
         return password;
-    }
-
-    @Override
-    public String toXML() {
-        String xml = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n" +
-                "<configuration>\n" +
-                "  <jdbc>\n" +
-                "    <driver>" + getDriver() + "</driver>\n" +
-                "    <url>" + getUrl() + "</url>\n" +
-                "    <user>" + getUserName() + "</user>\n" +
-                "    <password>" + getPassword() + "</password>\n" +
-                "  </jdbc>\n" +
-                "  <generator>\n" +
-                "    <database>\n" +
-                "      <name>" + getTypeName() + "</name>\n" +
-                "      <includes>.*</includes>\n" +
-                "      <excludes></excludes>\n" +
-                "      <inputSchema>" + getDatabase() + "</inputSchema>\n" +
-                "    </database>\n" +
-                "    <generate></generate>\n" +
-                "\n" +
-                "    <target>\n" +
-                "      <packageName>com.yumcouver.spoonie.database</packageName>\n" +
-                "      <directory>src/main/java</directory>\n" +
-                "    </target>\n" +
-                "  </generator>\n" +
-                "</configuration>";
-        return xml;
     }
 }
