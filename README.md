@@ -18,6 +18,7 @@ The crawler for Yumcouver
 The following software components are required to be pre-installed in order to develop for this project:
 
 * [maven](http://maven.apache.org/) `v3.0.0+`
+* [python](https://www.python.org) `v2.7.5`
 * [java](http://www.oracle.com/technetwork/java/javase/overview/index.html)
 
 ### Installing Dependencies
@@ -32,7 +33,8 @@ Here is one method of installing all the necessary dependencies on a Mac via Hom
 
 ## Technology Stack
 
-* [Java](http://docs.oracle.com/javase/7/docs/api/) : The primary development language of this project.
-* [jOOQ](http://www.jooq.org/) : jOOQ generates Java code from your database and lets you build typesafe SQL queries through its fluent API.
-* [Maven](http://maven.apache.org/) : Apache Maven is a software project management and comprehension tool.
-* [HtmlUnit](http://htmlunit.sourceforge.net/) : HtmlUnit is a "GUI-Less browser for Java programs".
+* [Java](http://docs.oracle.com/javase/7/docs/api/): The primary development language of this project.
+* [jOOQ](http://www.jooq.org/): jOOQ generates Java code from your database and lets you build typesafe SQL queries through its fluent API.
+* [Maven](http://maven.apache.org/): Apache Maven is a software project management and comprehension tool.
+* [HtmlUnit](http://htmlunit.sourceforge.net/): HtmlUnit is a "GUI-Less browser for Java programs".
+* [Derby](http://db.apache.org/derby/): Java-based embedded SQL database engine for unit testing.
