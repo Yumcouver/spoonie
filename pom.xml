@@ -10,6 +10,20 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+    <profiles>
+        <profile>
+            <id>test</id>
+            <properties>
+                <envname>test</envname>
+            </properties>
+        </profile>
+        <profile>
+            <id>staging</id>
+            <properties>
+                <envname>staging</envname>
+            </properties>
+        </profile>
+    </profiles>
 
     <dependencies>
         <dependency>
@@ -76,7 +90,7 @@
                             <executable>python2.7</executable>
                             <arguments>
                                 <argument>${project.basedir}/src/main/python/configuration_generator.py</argument>
-                                <argument>test</argument>
+                                <argument>${envname}</argument>
                             </arguments>
                         </configuration>
                     </execution>
