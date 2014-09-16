@@ -30,6 +30,15 @@ Here is one method of installing all the necessary dependencies on a Mac via Hom
 
     # test #
     $ mvn -v
+    
+### Packaging code
+
+    $ cd /path/to/spoonie
+    $ mvn clean install -P <environment> # where <environment> is one of the options listed below
+    
+    # example #
+    $ mvn clean install -P test
+    $ mvn clean install -P staging
 
 ## Technology Stack
 
