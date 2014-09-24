@@ -18,7 +18,7 @@ The crawler for Yumcouver
 The following software components are required to be pre-installed in order to develop for this project:
 
 * [maven](http://maven.apache.org/) `v3.0.0+`
-* [python](https://www.python.org) `v2.7.5`
+* [python](https://www.python.org) `v2.7.5+`
 * [java](http://www.oracle.com/technetwork/java/javase/overview/index.html)
 
 ### Installing Dependencies
