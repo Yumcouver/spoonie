@@ -108,7 +108,7 @@
                         <configuration>
                             <mainClass>org.jooq.util.GenerationTool</mainClass>
                             <arguments>
-                                <argument>src/main/resources/generated/jooq-config.xml</argument>
+                                <argument>src/main/resources/META-INF/generated/jooq-config.xml</argument>
                             </arguments>
                             <additionalClasspathElements>
                                 <additionalClasspathElement>${project.basedir}</additionalClasspathElement>
@@ -123,7 +123,7 @@
                 <configuration>
                     <filesets>
                         <fileset>
-                            <directory>src/main/resources/generated</directory>
+                            <directory>src/main/resources/META-INF/generated</directory>
                             <includes>
                                 <include>**/*</include>
                             </includes>
