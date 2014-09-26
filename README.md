@@ -47,3 +47,4 @@ Here is one method of installing all the necessary dependencies on a Mac via Hom
 * [Maven](http://maven.apache.org/): Apache Maven is a software project management and comprehension tool.
 * [HtmlUnit](http://htmlunit.sourceforge.net/): HtmlUnit is a "GUI-Less browser for Java programs".
 * [Derby](http://db.apache.org/derby/): Java-based embedded SQL database engine for unit testing.
+* [Java Architecture for XML Binding](http://www.oracle.com/technetwork/articles/javase/index-140168.html): XML and Java technology are recognized as ideal building blocks for developing Web services and applications that access Web services.
