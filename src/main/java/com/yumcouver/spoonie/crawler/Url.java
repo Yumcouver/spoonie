@@ -4,7 +4,7 @@ import java.net.InetAddress;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-class Url {
+public class Url {
 
     private URL ipUrl = null;
     private URL domainUrl = null;
@@ -40,6 +40,10 @@ class Url {
     public boolean match(String regex) {
 //        TODO fill in later
         return true;
+    }
+
+    public String getUrlAsString() {
+        return this.ipUrl.toString();
     }
 
     @Override

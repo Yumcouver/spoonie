@@ -11,17 +11,19 @@ import java.util.Map;
 /**
  * configuration of application
  */
-public class ApplicationConf implements DatabaseInfo {
+public class ApplicationConf implements DatabaseInfo, WorkerInfo {
     private DatabaseConf dbConf;
+    private WorkerConf workerConf;
 
     public ApplicationConf(String env) {
-        InputStream in = ApplicationConf.class.getResourceAsStream("/application.yaml");
+        InputStream in = ApplicationConf.class.getResourceAsStream("/META-INF/application.yaml");
         StringWriter writer = new StringWriter();
         try {
             IOUtils.copy(in, writer, "UTF-8");
             Yaml yaml = new Yaml();
             Map<String, Object> conf = (Map<String, Object>) (((Map<String, Object>) (yaml.load(writer.toString()))).get(env));
             dbConf = new DatabaseConf((Map<String, Object>) (conf.get("db")));
+            workerConf = new WorkerConf((Map<String, Object>) (conf.get("worker")));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -57,4 +59,8 @@ public class ApplicationConf implements DatabaseInfo {
         return dbConf.getPassword();
     }
 
+    @Override
+    public int getWorkerThreadCount() {
+        return workerConf.getWorkerThreadCount();
+    }
 }

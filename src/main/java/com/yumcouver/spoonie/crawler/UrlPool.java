@@ -9,7 +9,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class UrlPool {
-    private static final Log log = LogFactory.getLog(UrlPool.class);
+    private static final Log LOG = LogFactory.getLog(UrlPool.class);
 
     private static UrlPool ourInstance = new UrlPool();
 
@@ -24,17 +24,18 @@ public class UrlPool {
     }
 
     public List<Url> fetchUrls(int length) {
+        List<Url> urls = null;
         synchronized (this.queue) {
-            log.info("Fetching " + String.valueOf(Math.min(this.queue.size(), length)) + " urls ...");
-            List<Url> urls = new ArrayList<Url>(this.queue.subList(0, Math.min(this.queue.size(), length)));
+            LOG.info("Fetching " + String.valueOf(Math.min(this.queue.size(), length)) + " urls ...");
+            urls = new ArrayList<Url>(this.queue.subList(0, Math.min(this.queue.size(), length)));
             this.queue.removeAll(urls);
-            return urls;
         }
+        return urls;
     }
 
     public void addUrls(Collection<Url> urls) {
+        LOG.info("Adding " + String.valueOf(urls.size()) + " urls ...");
         synchronized (this.queue) {
-            log.info("Adding " + String.valueOf(urls.size()) + " urls ...");
             this.queue.addAll(urls);
         }
     }
