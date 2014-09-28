@@ -16,7 +16,7 @@ public class ApplicationConf implements DatabaseInfo, WorkerInfo {
     private WorkerConf workerConf;
 
     public ApplicationConf(String env) {
-        InputStream in = ApplicationConf.class.getResourceAsStream("/META-INF/application.yaml");
+        InputStream in = ApplicationConf.class.getResourceAsStream("/application.yaml");
         StringWriter writer = new StringWriter();
         try {
             IOUtils.copy(in, writer, "UTF-8");
